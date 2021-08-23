@@ -43,17 +43,18 @@ This code requires
 
 * Download dataset from https://challenge.isic-archive.com/data
 * Clone this repo (obviously!)
-* In this directory, make a folder in `dataset` named `isic2016` and keep all files there
-* To build training set and test set
+* In the parent directory, make a folder in `dataset` named `isic2016` and keep all files there
+* To build training set and test set, go inside the isic2016_scripts folder
+* run the following two commands
 
 ```
-python data_process_isic2016.py
+python data_preprocess_isic2016.py
 ```
 
 * To partition the dataset for training CycleGAN (two folders malignant and benign)
 
 ```
-python data_process_gan.py
+python data_preprocess_gan.py
 ``` 
 
 You will see that this script creates two folders `trainA` and `trainB`. Due to my utter laziness, I created `testA` and `testB` folders manually which are required for visualizing the training process of the CycleGAN. For my experiments, `testA` consisted of an image from `trainA` and vice versa.
